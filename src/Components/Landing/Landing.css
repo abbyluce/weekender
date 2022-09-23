@@ -1,25 +1,25 @@
 .header {
-    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 0;
+    margin-bottom: -118px;
 }
 
 .logo {
     width: 55%;
     border-right: solid 15vw #B6873F;
     border-left: solid 15vw #B6873F;
-    border-bottom: solid 17vh #B6873F;
+    border-bottom: solid 13vh #B6873F;
+    border-top: solid 7vh #B6873F;
 }
 
 .arrow {
     filter: invert(100%);
-    margin-top: -80px;
-    /* margin-bottom: -10px; */
+    margin-top: 4vh;
     height: 10vh;
     opacity: .7;
     animation: bounce 2s infinite;
+    cursor: pointer;
 }
 
 @keyframes bounce {
@@ -27,9 +27,9 @@
       transform: translateY(0);
     }
     40% {
-      transform: translateY(-30px);
+      transform: translateY(-20px);
     }
     60% {
-      transform: translateY(-15px);
+      transform: translateY(-10px);
     }
   }

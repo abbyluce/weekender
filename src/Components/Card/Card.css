@@ -1,0 +1,45 @@
+.trip-card {
+    width: 33%;
+    margin: .7%;
+    border-radius: 10px;
+    background-color: #D9DCD6;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+}
+
+.city-name-card {
+    font-family: 'Kristi', cursive;
+    font-size: 500%;
+    margin-top: 0;
+    font-weight: 500;
+    color: white;
+    text-shadow:1px 1px 0px #343333;
+    margin-bottom: 20%;
+    padding: 6vh 0;
+}
+
+.card-p {
+    color: #886176;
+    font-size: 150%;
+    margin: 0;
+    font-weight: 600;
+    height: 20%;
+    padding: 2vh 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.view-details-card-button {
+    background: none;
+    border: solid 2px white;
+    padding: 10px 20px;
+    font-size: 2vh;
+    color: white;
+    margin: 4vh 0;
+}
+
+.view-details-card-button:hover {
+    cursor: pointer;
+    background: #886176;
+    transition: all 300ms ease-in-out;
+    color: white;
+} 

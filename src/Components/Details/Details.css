@@ -1,0 +1,86 @@
+.city-titleblock {
+    height: 75vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.city-name {
+    font-family: 'Kristi', cursive;
+    font-weight: 500;
+    color: white;
+    font-size: 20vh;
+    text-shadow:1px 1px 0px #343333;
+    margin: 4vw 0 2vh 0;
+}
+
+.city-desc {
+    width: 75%;
+    color: white;
+    margin: 0 5vw 1vh 5vw;
+    font-size: 3vh;
+    border-radius: 10px;
+    font-style: italic;
+}
+
+.details-body {
+    background-color: #886176;
+    margin: 0 7vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 3vh;
+    color: white;
+    padding-bottom: 3vh;
+}
+
+.activities-container {
+    display: flex;
+    justify-content: center;
+    background-color: #B6873F;
+    width: 100%;
+    color: white;
+}
+
+.stay-image {
+    width: 50%;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+}
+
+.activity-image {
+    width: 40vw;
+    height: 50vh;
+    object-fit: cover;
+    margin: 30px 10px 0 10px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+}
+
+.stay-container {
+    margin-top: 2vh;
+}
+
+.hours-from-denver {
+    color: white;
+    font-size: 4vh;
+    margin-bottom: 0;
+}
+
+.footer-bar {
+    height: 10vh;
+    background-color: #D9DCD6;
+    width: 100%;
+}
+
+.bottom-arrow {
+    filter: invert(100%);
+    margin-top: 2vh;
+    height: 6vh;
+    opacity: .7;
+    cursor: pointer;
+    transform: rotate(180deg);
+}
+
