@@ -1,11 +1,10 @@
 import './TripContainer.css'
 import React from 'react'
 import Card from '../Card/Card'
-import logo from '../../images/logo_b.png'
 import Form from '../Form/Form'
-import { Link } from "react-router-dom"
+import Logo from '../Logo/Logo'
 
-const TripContainer = ({trips}) => {
+const TripContainer = ({trips, filterTrips}) => {
 
     const tripList = trips.map(trip => {
         const {id, city_image, city_name, hours_from_denver} = trip
@@ -20,10 +19,11 @@ const TripContainer = ({trips}) => {
 
     return (
         <div>
+            <Logo />
             <div className="trip-container-header">
                 <h2 className="trip-container-title">ALL WEEKEND TRIPS</h2>
             </div>
-            <Form />
+            <Form filterTrips={filterTrips}/>
             <div className="trip-container">
             {tripList}
             </div>
@@ -33,6 +33,3 @@ const TripContainer = ({trips}) => {
 
 export default TripContainer 
 
-{/* <Link to="/">
-<img src={logo} alt='logo' className='logo-trip-cont' />
-</Link> */}

@@ -1,0 +1,9 @@
+.logo-trip-cont {
+    background: #B6873F;
+    border-radius: 50%;
+    width:18%;
+    z-index: +1;
+    position: absolute;
+    left: 2vw;
+    top: -2vh;
+}

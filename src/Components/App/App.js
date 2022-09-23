@@ -39,6 +39,16 @@ class App extends Component {
     this.fetchAllTrips();
   }
 
+  filterTrips = (driveTime) => {
+    const filteredTrips = this.state.trips.reduce((acc, trip) => {
+      const driveRange = driveTime.split('-')
+      if (trip.hours_from_denver >= parseInt(driveRange[0]) && trip.hours_from_denver <= driveRange[1]) {
+        acc.push(trip)
+      }
+      return acc
+    }, [])
+    this.setState({trips: filteredTrips})
+  }
 
   render() {
     return(
@@ -46,17 +56,19 @@ class App extends Component {
         <Route exact path="/" render={() => {
           return (
           <div>
+            <NavBar />
             <Landing /> 
             <FeaturedTrip /> 
+            <NavBar />
           </div>) }} />
         <Route exact path="/all-trips" render={() => {
           return (
             <div>
               <NavBar />
-              <TripContainer trips={this.state.trips}/> 
+              <TripContainer trips={this.state.trips} filterTrips={this.filterTrips}/> 
             </div>
           )}} />
-          <Route exact path="/:id" render={({match}) => {
+          <Route exact path="/:id" to="main-body" render={({match}) => {
           const clickedTrip = this.state.trips.find(trip => trip.id === match.params.id)
           return <Details trip={clickedTrip}/>
         }} />
