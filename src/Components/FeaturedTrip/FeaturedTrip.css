@@ -20,14 +20,14 @@
 
 .featured-title-area {
     color: white;
-    height: 92vh;
+    height: 100vh;
 }
 
 .featured-body-photos {
     margin-top: -310px;
     display: flex;
     justify-content: center;
-    background-color: #D9DCD6;
+    background-color: white;
 }
 
 .featured-photo {
@@ -40,10 +40,10 @@
 }
 
 .featured-body-text {
-    background-color: #D9DCD6;
+    background-color: white;
     color: #886176;
     font-size: 3vh;
-    margin-top: -10px;
+    margin-top: -5px;
 }
 
 .view-details-button {
@@ -62,3 +62,7 @@
     transition: all 300ms ease-in-out;
     color: white;
 } 
+
+.featured-body {
+    background: white;
+}

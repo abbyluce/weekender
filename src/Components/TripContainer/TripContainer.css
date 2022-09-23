@@ -6,19 +6,11 @@
 }
 
 .trip-container-title {
-    font-size: 5vh;
+    font-size: 6vh;
     font-weight: 200;
     width: 100%;
     color: #886176;
-}
-
-.logo-trip-cont {
-    background: #B6873F;
-    border-radius: 50%;
-    width:300px;
-    height:300px;
-    z-index: +1;
-    position: relative;
+    margin: 2vh;
 }
 
 .trip-container-header {

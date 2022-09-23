@@ -3,22 +3,22 @@ import './Details.css'
 import NavBar from '../NavBar/NavBar'
 import { Link } from 'react-scroll'
 import arrow from '../../images/arrow.png'
+import Logo from '../Logo/Logo'
 
 const Details = ({trip}) => {
     return trip ? (
         <div id="main-body">
             <NavBar />
+            <Logo />
             <div className="city-titleblock" style={{
                     backgroundImage: `url(${trip.city_image})`, 
                     backgroundPosition: "top", 
                     backgroundSize: "cover"}}>
             <h2 className="city-name">{trip.city_name} </h2>
-                <p className="hours-from-denver">
-                    HOURS FROM DENVER: {trip.hours_from_denver}
-                </p>
-            <p className="city-desc">{trip.city_desc}</p>
             </div>
             <div className="details-body">
+            <p className="hours-from-denver">HOURS FROM DENVER: {trip.hours_from_denver}</p>
+            <p className="city-desc">{trip.city_desc}</p>
                 <div className="activities-container">
                         <div>
                             <img src={trip.day_activity_1_image} alt={`${trip.city_name} activity 1`} className="activity-image"/>
@@ -62,10 +62,8 @@ const Details = ({trip}) => {
                     <img src={arrow} alt='arrow' className='bottom-arrow' />
                 </Link>
             </div>
-
-            
         </div>
-    ) : <p>Loading...</p>
+    ) : <p></p>
 
 }
 

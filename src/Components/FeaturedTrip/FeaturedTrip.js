@@ -13,6 +13,7 @@ const FeaturedTrip = () => {
                     <h2 className="featured-trip-title">FEATURED TRIP:</h2>
                     <h4 className="featured-city-name">Crested Butte</h4>
                 </div>
+                <div className="featured-body">
                 <div className="featured-body-photos">
                     <img className="featured-photo" src="https://a0.muscache.com/im/pictures/miso/Hosting-50445514/original/86c695b5-2972-412d-b70a-e20688b6c052.jpeg?im_w=1200" alt="airbnb-photo"/>
                     <img className="featured-photo" src="https://i0.wp.com/aliciamarietravels.com/wp-content/uploads/2020/08/DSC_0073.jpg?resize=640%2C408&ssl=1" alt="hike-photo"/>
@@ -27,6 +28,8 @@ const FeaturedTrip = () => {
                     </button>
                 </Link>
             </div>
+            </div>
+            
         </div>
     )
 }

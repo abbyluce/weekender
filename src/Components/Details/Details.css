@@ -19,9 +19,8 @@
 .city-desc {
     width: 75%;
     color: white;
-    margin: 0 5vw 1vh 5vw;
+    margin: 3vh 4vw 3vh 4vw;
     font-size: 3vh;
-    border-radius: 10px;
     font-style: italic;
 }
 
