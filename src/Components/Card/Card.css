@@ -29,17 +29,7 @@
 }
 
 .view-details-card-button {
-    background: none;
     border: solid 2px white;
-    padding: 10px 20px;
-    font-size: 2vh;
     color: white;
     margin: 4vh 0;
 }
-
-.view-details-card-button:hover {
-    cursor: pointer;
-    background: #886176;
-    transition: all 300ms ease-in-out;
-    color: white;
-} 

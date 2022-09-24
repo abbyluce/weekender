@@ -4,9 +4,11 @@ import Card from '../Card/Card'
 import Form from '../Form/Form'
 import Logo from '../Logo/Logo'
 
-const TripContainer = ({trips, filterTrips}) => {
+const TripContainer = ({trips, filterTrips, filteredTrips, clearState}) => {
 
-    const tripList = trips.map(trip => {
+    let tripList 
+    if (filteredTrips.length) {
+        tripList = filteredTrips.map(trip => {
         const {id, city_image, city_name, hours_from_denver} = trip
         return <Card 
         key={id}
@@ -15,11 +17,23 @@ const TripContainer = ({trips, filterTrips}) => {
         cityName={city_name}
         hoursFromDenver={hours_from_denver} 
         />
-    })
+        })
+    } else {
+        tripList = trips.map(trip => {
+        const {id, city_image, city_name, hours_from_denver} = trip
+        return <Card 
+        key={id}
+        id={id}
+        cityImage={city_image}
+        cityName={city_name}
+        hoursFromDenver={hours_from_denver} 
+        />  
+        })
+    }
 
     return (
         <div>
-            <Logo />
+            <Logo clearState={clearState}/>
             <div className="trip-container-header">
                 <h2 className="trip-container-title">ALL WEEKEND TRIPS</h2>
             </div>

@@ -14,10 +14,10 @@
 }
 
 .arrow {
-    filter: invert(100%);
+    filter: invert(90%);
     margin-top: 4vh;
     height: 10vh;
-    opacity: .7;
+    opacity: .8;
     animation: bounce 2s infinite;
     cursor: pointer;
 }

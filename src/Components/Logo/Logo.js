@@ -3,10 +3,10 @@ import { Link } from "react-router-dom"
 import React from 'react'
 import logo from '../../images/logo_b.png'
 
-const Logo = () => {
+const Logo = ({clearState}) => {
 return (
     <Link to="/">
-    <img src={logo} alt='logo' className='logo-trip-cont' />
+    <img src={logo} alt='logo' onClick={() => clearState()} className='logo-trip-cont' />
     </Link>
 )
 }
