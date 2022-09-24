@@ -66,6 +66,7 @@ class App extends Component {
           return (
           <div>
             <NavBar clearState={this.clearState}/>
+            {(this.state.error && <h2 className="error">{this.state.errorMessage}</h2>)}
             <Landing /> 
             <FeaturedTrip trips={this.state.trips}/> 
             <NavBar clearState={this.clearState}/>
