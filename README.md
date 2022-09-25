@@ -42,8 +42,8 @@
 - Filter trips by tags
 
 ## Set Up
-- Deployed application: https://one-hit-wonders-app.herokuapp.com
-- Deployed API: https://weekender-api.herokuapp.com/api/v1/trips
+- [Deployed application](https://weekender-denver-app.herokuapp.com/)
+- [Deployed API](https://weekender-api.herokuapp.com/api/v1/trips)
 
 ## Organizational Resources
 - [github project board](https://github.com/users/abbyluce/projects/2)
