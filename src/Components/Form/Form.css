@@ -1,7 +1,7 @@
 select {
     background-color: #886176;
     color: white;
-    width: 25vw;
+    width: 27vw;
     height: 5vh;
     cursor: pointer;
 }
@@ -9,7 +9,7 @@ select {
 .form {
     display: flex;
     align-items: center;
-    font-size: 2vh;
+    font-size: 5%;
     justify-content: center;
 }
 
@@ -23,7 +23,8 @@ select {
   .search-button {
     background: none;
     border: solid 2px #886176;
-    padding: 10px 20px;
+    padding: 10px 5px;
     color: #886176;
     margin-left: 4px;
+    width: 20vw;
   }

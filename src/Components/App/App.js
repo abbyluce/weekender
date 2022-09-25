@@ -6,6 +6,7 @@ import TripContainer from '../TripContainer/TripContainer'
 import Details from '../Details/Details'
 import About from '../About/About'
 import NavBar from '../NavBar/NavBar'
+import Favorites from '../Favorites/Favorites'
 import { Route } from 'react-router-dom'
 
 class App extends Component {
@@ -14,6 +15,7 @@ class App extends Component {
     this.state = {
       trips: [],
       filteredTrips: [],
+      favoritedTrips: [],
       error: false,
       errorMessage: null
     }
@@ -54,6 +56,11 @@ class App extends Component {
     
   }
 
+  favoriteATrip = (id) => {
+    const newFave = this.state.trips.find(trip => trip.id === id)
+    this.state.favoritedTrips.push(newFave)
+    }
+
   clearState = () => {
     this.fetchAllTrips()
     this.setState({filteredTrips: []})
@@ -62,34 +69,22 @@ class App extends Component {
   render() {
     return(
       <div>
+        <NavBar clearState={this.clearState}/>
         <Route exact path="/" render={() => {
           return (
           <div>
-            <NavBar clearState={this.clearState}/>
             {(this.state.error && <h2 className="error">{this.state.errorMessage}</h2>)}
             <Landing /> 
             <FeaturedTrip trips={this.state.trips}/> 
             <NavBar clearState={this.clearState}/>
           </div>) }} />
-        <Route exact path="/all-trips" render={() => {
-          return (
-            <div>
-              <NavBar clearState={this.clearState}/>
-              <TripContainer trips={this.state.trips} filteredTrips={this.state.filteredTrips} filterTrips={this.filterTrips} clearState={this.clearState}/> 
-            </div>
-          )}} />
-        <Route exact path="/:id" to="main-body" render=     {({match}) => {
+        <Route exact path="/all-trips" render={() => <TripContainer trips={this.state.trips} filteredTrips={this.state.filteredTrips} filterTrips={this.filterTrips} clearState=  {this.clearState}/> } />
+        <Route exact path="/:id" to="main-body" render={({match}) => {
             const clickedTrip = this.state.trips.find(trip => trip.id === match.params.id)
-            return <Details trip={clickedTrip}/>
+            return <Details favoriteATrip={this.favoriteATrip} trip={clickedTrip}/>
           }} />
-        <Route exact path="/about" render={() => {
-        return (
-          <div>
-            <NavBar clearState={this.clearState}/> 
-            <About /> 
-          </div>
-          )
-        }} />
+        <Route exact path="/about" render={() => <About /> } />
+        <Route exact path="/favorites" render={() => <Favorites clearState={this.clearState} trips={this.state.favoritedTrips} /> } />
       </div>
     )
   }

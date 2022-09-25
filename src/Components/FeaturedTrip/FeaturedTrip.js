@@ -6,7 +6,6 @@ const FeaturedTrip = ({trips}) => {
 
     let featuredTripIndex = Math.floor(Math.random() * trips.length)
     let featuredTrip = trips[featuredTripIndex]
-    console.log(trips)
     
     return trips.length ? (
         <div className="featured" id="featured">
