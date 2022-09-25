@@ -13,5 +13,17 @@ button {
   color: #886176;
   margin-bottom: 5vh;
   margin-top: -2vh;
-  margin: 10px 40px;
+  margin: 10px 0px;
+}
+
+@media (min-width: 320px) and (max-width: 989px) {
+  button {
+    width: 90vw;
+  }
+}
+/* ipad and laptops  */
+@media (min-width: 990px) {
+  button {
+    width: 75%;
+  }
 }

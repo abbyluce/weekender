@@ -1,9 +1,24 @@
 .logo-trip-cont {
     background: #B6873F;
     border-radius: 50%;
-    width:18%;
     z-index: +1;
     position: absolute;
-    left: 2vw;
-    top: -2vh;
+}
+
+/* mobile */
+@media (min-width: 320px) and (max-width: 989px) {
+    .logo-trip-cont {
+        width:30%;
+        left: -2vw;
+        top: -4vh;
+      }
+  }
+/* ipad and laptops  */
+@media (min-width: 990px) {
+   .logo-trip-cont {
+     width:18%;
+     left: 2vw;
+     top: -2vh;
+
+   }
 }

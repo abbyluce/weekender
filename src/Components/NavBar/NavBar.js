@@ -11,7 +11,9 @@ const NavBar = ({clearState}) => {
         <Link to="/about">
             <button className="nav-button">ABOUT WEEKENDER</button>
         </Link>
-        <button className="nav-button">SAVED FAVORITES</button>
+        <Link to="/favorites">
+            <button className="nav-button">SAVED FAVORITES</button>
+        </Link>
     </div>
     )
 }

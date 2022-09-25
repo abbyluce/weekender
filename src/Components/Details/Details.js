@@ -1,14 +1,12 @@
 import React from "react"
 import './Details.css'
-import NavBar from '../NavBar/NavBar'
 import { Link } from 'react-scroll'
 import arrow from '../../images/arrow.png'
 import Logo from '../Logo/Logo'
 
-const Details = ({trip}) => {
+const Details = ({trip, favoriteATrip}) => {
     return trip ? (
         <div id="main-body">
-            <NavBar />
             <Logo />
             <div className="city-titleblock" style={{
                     backgroundImage: `url(${trip.city_image})`, 
@@ -57,8 +55,12 @@ const Details = ({trip}) => {
                             {trip.stay}
                         </div>
             </div>
+                <button onClick={() => favoriteATrip(trip.id)}>SAVE THIS TRIP</button>
+                <br></br>
+                <iframe src={trip.directions} style={{width: "400", height: "300", border: "0", allowFullScreen: "", loading: "lazy", referrerPolicy: "no-referrer-when-downgrade"}}>
+                </iframe>
             <div className="footer-bar">
-                <Link to="main-body" spy={true} smooth={true}>
+                <Link to="main-body" offset={-200} spy={true} smooth={true}>
                     <img src={arrow} alt='arrow' className='bottom-arrow' />
                 </Link>
             </div>

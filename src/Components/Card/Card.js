@@ -3,6 +3,7 @@ import './Card.css'
 import { Link } from "react-router-dom"
 
 const Card = ({id, cityImage, cityName, hoursFromDenver}) => {
+ 
     return (
         <Link to={`${id}`} className="trip-card">
         <div className="card"
