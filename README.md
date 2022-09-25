@@ -1,4 +1,6 @@
 # Weekender
+<img width="1409" alt="Screen Shot 2022-09-25 at 12 07 59 PM" src="https://user-images.githubusercontent.com/100726140/192158634-350e7c97-8dd2-43d2-b7c4-c9a939a3c773.png">
+
 
 ## Table of Contents
   - [Introduction](#introduction)
@@ -26,6 +28,9 @@
   - CSS
 
 ## Features
+<img width="700" alt="Screen Shot 2022-09-25 at 12 08 22 PM" src="https://user-images.githubusercontent.com/100726140/192158660-624494ee-b2c8-40e4-be3a-1dacf4900230.png">
+<img width="700" alt="Screen Shot 2022-09-25 at 12 08 51 PM" src="https://user-images.githubusercontent.com/100726140/192158666-32e37065-fe34-481b-bb46-7f954a997e20.png">
+
 - See a different featured trip each time the page loads
 - View all trips and filter by drive time from Denver
 - Each trip's details including where to stay, eat, and explore
