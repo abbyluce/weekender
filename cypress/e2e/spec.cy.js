@@ -1,10 +1,10 @@
 describe('App', () => {
   beforeEach(() => {
-    cy.visit("http://localhost:3000/").wait(2000)
+    cy.visit("https://weekender-denver-app.herokuapp.com/").wait(2000)
   })
 
   it('Should visit the website', () => {
-    cy.visit("http://localhost:3000/")
+    cy.visit("https://weekender-denver-app.herokuapp.com/")
   })
 
   it('Should show a landing page with a navigation bar and logo', () => {
