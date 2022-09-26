@@ -1,6 +1,7 @@
 import './NavBar.css'
 import React from "react"
 import { Link } from "react-router-dom"
+import PropTypes from 'prop-types'
 
 const NavBar = ({clearState}) => {
     return (
@@ -19,3 +20,7 @@ const NavBar = ({clearState}) => {
 }
 
 export default NavBar
+
+NavBar.propTypes = {
+    clearState: PropTypes.elementType 
+}

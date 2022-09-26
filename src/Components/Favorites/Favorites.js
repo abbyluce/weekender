@@ -1,6 +1,7 @@
 import React from 'react'
 import Logo from '../Logo/Logo'
 import Card from '../Card/Card'
+import PropTypes from 'prop-types'
 
 const Favorites = ({trips, clearState}) => {
     let faves
@@ -31,3 +32,26 @@ const Favorites = ({trips, clearState}) => {
 }
 
 export default Favorites
+
+const tripsShape = {
+    id: PropTypes.string,
+    city_name: PropTypes.string,
+    city_image: PropTypes.string,
+    city_desc: PropTypes.string,
+    stay: PropTypes.string,
+    stay_link: PropTypes.string,
+    stay_image: PropTypes.string,
+    day_activity_1: PropTypes.string,
+    day_activity_1_image: PropTypes.string,
+    day_activity_2: PropTypes.string,
+    day_activity_2_image: PropTypes.string,
+    restaurant_1: PropTypes.string,
+    restaurant_2: PropTypes.string,
+    hours_from_denver: PropTypes.number,
+    directions: PropTypes.string
+}
+
+Favorites.propTypes = {
+    trips: PropTypes.arrayOf(PropTypes.shape(tripsShape)).isRequired,
+    clearState: PropTypes.elementType
+  }
