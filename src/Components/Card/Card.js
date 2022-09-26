@@ -1,6 +1,7 @@
 import React from 'react'
 import './Card.css'
 import { Link } from "react-router-dom"
+import PropTypes from 'prop-types'
 
 const Card = ({id, cityImage, cityName, hoursFromDenver}) => {
  
@@ -29,3 +30,10 @@ const Card = ({id, cityImage, cityName, hoursFromDenver}) => {
 }
 
 export default Card
+
+Card.propTypes = {
+    id: PropTypes.string,
+    cityName: PropTypes.string,
+    cityImage: PropTypes.string,
+    hoursFromDenver: PropTypes.number,
+}

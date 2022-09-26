@@ -3,6 +3,7 @@ import './Details.css'
 import { Link } from 'react-scroll'
 import arrow from '../../images/arrow.png'
 import Logo from '../Logo/Logo'
+import PropTypes from 'prop-types'
 
 const Details = ({trip, favoriteATrip}) => {
     return trip ? (
@@ -70,3 +71,26 @@ const Details = ({trip, favoriteATrip}) => {
 }
 
 export default Details
+
+const tripShape = {
+    id: PropTypes.string,
+    city_name: PropTypes.string,
+    city_image: PropTypes.string,
+    city_desc: PropTypes.string,
+    stay: PropTypes.string,
+    stay_link: PropTypes.string,
+    stay_image: PropTypes.string,
+    day_activity_1: PropTypes.string,
+    day_activity_1_image: PropTypes.string,
+    day_activity_2: PropTypes.string,
+    day_activity_2_image: PropTypes.string,
+    restaurant_1: PropTypes.string,
+    restaurant_2: PropTypes.string,
+    hours_from_denver: PropTypes.number,
+    directions: PropTypes.string
+}
+
+Details.propTypes = {
+    trip: PropTypes.shape(tripShape),
+    favoriteATrip: PropTypes.elementType
+}

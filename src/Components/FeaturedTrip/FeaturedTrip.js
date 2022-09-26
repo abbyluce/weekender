@@ -1,6 +1,7 @@
 import React from "react"
 import './FeaturedTrip.css'
 import { Link } from "react-router-dom"
+import PropTypes from 'prop-types'
 
 const FeaturedTrip = ({trips}) => {
 
@@ -39,3 +40,25 @@ const FeaturedTrip = ({trips}) => {
 }
 
 export default FeaturedTrip
+
+const tripsShape = {
+    id: PropTypes.string,
+    city_name: PropTypes.string,
+    city_image: PropTypes.string,
+    city_desc: PropTypes.string,
+    stay: PropTypes.string,
+    stay_link: PropTypes.string,
+    stay_image: PropTypes.string,
+    day_activity_1: PropTypes.string,
+    day_activity_1_image: PropTypes.string,
+    day_activity_2: PropTypes.string,
+    day_activity_2_image: PropTypes.string,
+    restaurant_1: PropTypes.string,
+    restaurant_2: PropTypes.string,
+    hours_from_denver: PropTypes.number,
+    directions: PropTypes.string
+}
+
+FeaturedTrip.propTypes = {
+    trips: PropTypes.arrayOf(PropTypes.shape(tripsShape)).isRequired
+  }

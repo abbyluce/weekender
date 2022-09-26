@@ -2,6 +2,7 @@ import './Logo.css'
 import { Link } from "react-router-dom"
 import React from 'react'
 import logo from '../../images/logo_b.png'
+import PropTypes from 'prop-types'
 
 const Logo = ({clearState}) => {
 return (
@@ -12,3 +13,7 @@ return (
 }
 
 export default Logo
+
+Logo.propTypes = {
+    clearState: PropTypes.elementType
+  }

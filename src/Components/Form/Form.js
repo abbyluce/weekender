@@ -1,6 +1,6 @@
 import './Form.css'
 import React from 'react'
-
+import PropTypes from 'prop-types'
 
 class Form extends React.Component {
     constructor(props) {
@@ -33,3 +33,7 @@ class Form extends React.Component {
 }
 
 export default Form
+
+Form.propTypes = {
+    filterTrips: PropTypes.elementType
+}
