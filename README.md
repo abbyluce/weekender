@@ -42,6 +42,11 @@
 - Filter trips by tags
 
 ## Set Up
+```
+git clone git@github.com:abbyluce/weekender.git
+npm install
+npm start
+```
 - [Deployed application](https://weekender-denver-app.herokuapp.com/)
 - [Deployed API](https://weekender-api.herokuapp.com/api/v1/trips)
 
