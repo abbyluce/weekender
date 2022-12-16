@@ -22,7 +22,7 @@ class App extends Component {
   }
 
   fetchAllTrips = () => {
-    fetch('https://weekender-api.herokuapp.com/api/v1/trips')
+    fetch('https://weekender-be.vercel.app/trips')
     .then(response => {
       if(!response.ok) {
         throw new Error()
